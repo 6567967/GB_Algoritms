@@ -7,7 +7,7 @@ number = int(input("number="))
 h = number // 100
 d = number // 10 % 10
 n = number % 10
-_sum = h + d + n
-_mul = h * d * n
+sum_of_digits = h + d + n
+multiply = h * d * n
 
-print(f"Сумма {h}+{d}+{n}={_sum}, а произведение {h}*{d}*{n}={_mul}")
+print(f"Сумма {h}+{d}+{n}={sum_of_digits}, а произведение {h}*{d}*{n}={multiply}")
