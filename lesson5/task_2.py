@@ -10,20 +10,24 @@ from string import hexdigits
 from string import digits
 from collections import defaultdict
 
+
 # def hex_str_to_list(string: str) -> list:
 #     return list(string.upper())
 #
 # print(hex_str_to_list("a2"))
 # print(hex_str_to_list("C4f"))
 
-def hex_digit_to_int(char: str=0) -> int:
+def hex_digit_to_int(char: str = 0) -> int:
     assert char in hexdigits
-    return int(char) if char in digits else ord(char.upper())-ord('A')+10
+    return int(char) if char in digits else ord(char.upper()) - ord('A') + 10
+
 
 hex_numbers = defaultdict(int)
 
 for char in set(hexdigits.upper()):
     hex_numbers[char] = hex_digit_to_int(char)
+
+
 # print(hex_numbers)
 
 
@@ -56,6 +60,7 @@ number2 = deque(input("Введите второе hex: ").upper())
 # number2 = deque("c4f")
 print(list(number1), list(number2), sep='\n')
 
+
 # def hex_digit_to_int(char: str) -> int:
 #     assert char not in [0-9]+['A'-'F']
 #     return int(char) if char in [0-9] else ord(char)-ord('A')+10
@@ -80,6 +85,7 @@ def hex_sum(number1: deque, number2: deque) -> deque:
     if overhead:
         result.appendleft('1')
     return result
+
 
 print(f"{list(number1)}+{list(number2)}={list(hex_sum(number1, number2))}")
 
@@ -108,7 +114,6 @@ def hex_mull(n1: deque, n2: deque) -> deque:
 
 
 print(hex_mull(number1, number2))
-
 
 # import random
 

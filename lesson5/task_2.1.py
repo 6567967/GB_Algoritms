@@ -7,12 +7,13 @@
 from collections import deque
 from string import hexdigits
 from string import digits
-import cProfile
+# import cProfile
 
 
 def hex_digit_to_int(char: str = '0') -> int:
     assert char in hexdigits, f'{char} not a hex digit'
     return int(char) if char in digits else ord(char.upper()) - ord('A') + 10
+
 
 hex_numbers = list(hexdigits.upper())[:16]
 
@@ -45,10 +46,11 @@ def hex_sum(num1: list, num2: list) -> list:
         result.appendleft('1')
     return list(result)
 
+
 # cProfile.run('hex_sum(["a"]*10000, ["b"]*10000)')
 # exit()
 print(f"{list(number1)}+{list(number2)}={list(hex_sum(number1, number2))}")
-print(*number1, '+', *number2,'=', *hex_sum(number1, number2), sep='')
+print(*number1, '+', *number2, '=', *hex_sum(number1, number2), sep='')
 
 
 def hex_mull(n1: list, n2: deque) -> deque:
@@ -74,8 +76,7 @@ def hex_mull(n1: list, n2: deque) -> deque:
 
 
 print(hex_mull(number1, deque(number2)))
-print(*number1, '*', *number2,'=', *hex_mull(number1, deque(number2)), sep='')
-
+print(*number1, '*', *number2, '=', *hex_mull(number1, deque(number2)), sep='')
 
 # import random
 #

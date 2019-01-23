@@ -6,10 +6,11 @@
 
 from collections import namedtuple
 from collections import deque
-from collections import defaultdict
-import random
+# from collections import defaultdict
+# import random
 
-def get_enterprise_data_strings(numb: int=0) -> tuple:
+
+def get_enterprise_data_strings(numb: int = 0) -> tuple:
     _enterprise_string = input(f"Введите наименование предприятия {numb} "
                                "и прибыль по четвертям(csv): ")
     # _enterprise_string = f'Microsoft{random.randint(0, 9)}, ' \
@@ -20,7 +21,9 @@ def get_enterprise_data_strings(numb: int=0) -> tuple:
 quarters = ['q1', 'q2', 'q3', 'q4']
 Year: namedtuple = namedtuple('Year', quarters)
 
-Enterprise:namedtuple = namedtuple('Enterprise', ['name', 'year'])
+Enterprise: namedtuple = namedtuple('Enterprise', ['name', 'year'])
+
+
 # year1 = Year(q1=10, q2=20, q3=30, q4=40)
 # ent1 = Enterprise('Microsoft', year=year1)
 # print(ent1)
@@ -41,6 +44,7 @@ def enterprise_average_profit(ent: Enterprise) -> float:
         total_profit += getattr(ent.year, quarter)
     return total_profit / len(quarters)
 
+
 # print(enterprise_average_profit(ent1))
 #
 # exit()
@@ -52,7 +56,7 @@ for _ in range(int(input("Введите количество предприят
     enterprises.append(eggs)
     ent_avg = enterprise_average_profit(eggs)
     total_average_profit = \
-        (total_average_profit * (len(enterprises)-1) + ent_avg) \
+        (total_average_profit * (len(enterprises) - 1) + ent_avg) \
         / (len(enterprises))
     # print(eggs, enterprise_average_profit(eggs), total_average_profit)
 print("Total average profit =", total_average_profit)
@@ -65,7 +69,7 @@ for ent in enterprises:
     if avg < total_average_profit:
         outsiders.append(ent.name)
         # print(f"{ent.name} аутсайдер ({avg}<{total_average_profit})")
-    elif avg>total_average_profit:
+    elif avg > total_average_profit:
         leaders.append(ent.name)
         # print(f"{ent.name} лидер ({avg}>{total_average_profit})")
     else:
