@@ -1,6 +1,6 @@
-# import l3t1 as MODULE
+import l3t1 as MODULE
 # import l2t5 as MODULE
-import l4t2 as MODULE
+# import l4t2 as MODULE
 import sys
 
 
@@ -32,4 +32,5 @@ def total_size(obj: object) -> int:
 
 
 if __name__ == "__main__":
+    print()
     print(f"total size: {total_size(MODULE)}")

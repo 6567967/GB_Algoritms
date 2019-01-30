@@ -17,3 +17,10 @@ for item in array:
 for item in value_count.items():
     print(*item, sep=' - ')
 
+# (var: MAX_ITEM) 	 (type: int) 	 (full size: 28)
+# (var: MIN_ITEM) 	 (type: int) 	 (full size: 28)
+# (var: array) 	 (type: list) 	 (full size: 3656)
+# (var: digit) 	 (type: int) 	 (full size: 28)
+# (var: item) 	 (type: tuple) 	 (full size: 120)
+# (var: value_count) 	 (type: dict) 	 (full size: 592)
+# total size: 4452
