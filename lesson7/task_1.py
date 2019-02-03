@@ -3,13 +3,13 @@
 # экран исходный и отсортированный массивы. Сортировка должна быть реализована
 # в виде функции. По возможности доработайте алгоритм (сделайте его умнее).
 
-from random import randint
+from random import randrange  # [x, y)
 
 MIN_VALUE = -100
-MAX_VALUE = 99
+MAX_VALUE = 100
 SIZE = 25
 
-int_array = [randint(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
+int_array = [randrange(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
 print(*int_array)
 
 
@@ -32,7 +32,7 @@ print(*int_array)
 
 def test():
     for i in range(1000):
-        arr1 = [randint(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
+        arr1 = [randrange(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
         arr2 = arr1.copy()
         bubble_sort_reverse(arr1)
         arr2.sort(reverse=True)
