@@ -9,9 +9,9 @@ MAX_VALUE = 50
 SIZE = 10
 
 
-def rand_float(_min: float, _max: float) -> float:
+def rand_float(min_: float, max_: float) -> float:
     """ rand_float() -> x in the interval [min, max). """
-    return random.random() * (_max - _min) + _min
+    return random.random() * (max_ - min_) + min_
 
 
 def merge(arr1, arr2):
