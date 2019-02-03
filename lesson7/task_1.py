@@ -5,12 +5,10 @@
 
 from random import randrange  # [x, y)
 
+
 MIN_VALUE = -100
 MAX_VALUE = 100
 SIZE = 25
-
-int_array = [randrange(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
-print(*int_array)
 
 
 def bubble_sort_reverse(array):
@@ -26,6 +24,8 @@ def bubble_sort_reverse(array):
         n += 1
 
 
+int_array = [randrange(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
+print(*int_array)
 bubble_sort_reverse(int_array)
 print(*int_array)
 

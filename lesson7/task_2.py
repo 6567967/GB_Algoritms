@@ -45,7 +45,7 @@ def merge_sort(arr):
 
 
 float_array = [rand_float(MIN_VALUE, MAX_VALUE) for _ in range(SIZE)]
-print(*float_array, 'v', *merge_sort(float_array), sep='\n')
+print(*float_array, 'v'*20, *merge_sort(float_array), sep='\n')
 
 
 def test():

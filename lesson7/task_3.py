@@ -11,10 +11,6 @@ M = 5
 MIN_VALUE = 0
 MAX_VALUE = 100
 
-# [MIN_VALUE, MAX_VALUE)
-int_array = [random.randrange(MIN_VALUE, MAX_VALUE) for _ in range(M * 2 + 1)]
-print(int_array)
-
 
 def get_median(arr) -> int:
     assert len(arr) % 2 == 1
@@ -39,6 +35,9 @@ def hoar_select(arr, index: int) -> int:
         return hoar_select(greater, index - len(less) - len(equal))
 
 
+# [MIN_VALUE, MAX_VALUE)
+int_array = [random.randrange(MIN_VALUE, MAX_VALUE) for _ in range(M * 2 + 1)]
+print(int_array)
 print(get_median(int_array))
 
 
