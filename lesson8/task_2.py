@@ -34,7 +34,7 @@ def huffman_code(s: str) -> dict:
     return code
 
 
-def huffman_decode(encoded, code):
+def huffman_decode(encoded: str, code: dict) -> str:
     decode = dict()
     for char, enc in code.items():
         decode[enc] = char
@@ -59,9 +59,11 @@ def main():
     code: dict = huffman_code(s)
     print(f'Huffman code: {code}')
     encoded: str = huffman_encode(s, code)
-    print(f'{len(code)} symbols ({list(code.keys())} coded by {len(encoded)} bits:')
+    print(f'{len(code)} symbols ({list(code.keys())} coded by '
+          f'{len(encoded)} bits:')
     print(encoded)
     # print(huffman_decode(encoded, code))
+
 
 def test():
     import random, string
@@ -70,10 +72,9 @@ def test():
                                       k=random.randint(0, 100)))
         code = huffman_code(eggs)
         assert huffman_decode(huffman_encode(eggs, code), code) == eggs
-        print(f'test {i+1} for {eggs} OK')
+        print(f'test {i + 1} for {eggs} OK')
 
 
 if __name__ == "__main__":
     main()
     # test()
-
