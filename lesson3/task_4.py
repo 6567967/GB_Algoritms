@@ -1,10 +1,12 @@
-# 4. Определить, какое число в массиве встречается чаще всего.
+"""
+4. Определить, какое число в массиве встречается чаще всего.
+"""
 
 import random
 
 SIZE = 10
 MIN_ITEM = 0
-MAX_ITEM = 100
+MAX_ITEM = 10
 array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 print(array)
 
